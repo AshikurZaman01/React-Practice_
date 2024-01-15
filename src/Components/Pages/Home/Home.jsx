@@ -1,9 +1,11 @@
-import Friends from "./Users";
+import Countries from "./Countries";
 
 const Home = () => {
     return (
         <div>
-            <Friends></Friends>
+            <h1>React World Tour</h1>
+
+            <Countries></Countries>
         </div>
     );
 };
