@@ -6,7 +6,9 @@ const Countries = () => {
     const [countries, setCountries] = useState([]);
     const [countVisited, setCountVisited] = useState([]);
     const [countriesName, setCountriesName] = useState([]);
+    const [flagss, setFlag] = useState([]);
 
+    console.log(countries)
     useState(() => {
         fetch('https://restcountries.com/v3.1/all')
             .then(res => res.json())
@@ -27,6 +29,12 @@ const Countries = () => {
         setCountriesName(newName);
     }
 
+    const handleFlag = (flag) => {
+        console.log('click flag')
+        const flags = countries.flags.png;
+        const newFlags = [...flags, flag]
+        console.log(newFlags)
+    }
 
 
     return (
@@ -40,6 +48,7 @@ const Countries = () => {
                         key={index}
                         handleVisitedCountries={handleVisitedCountries}
                         handleCisitedCountriesName={handleCisitedCountriesName}
+                        handleFlag={handleFlag}
 
                     ></Country>)
                 }

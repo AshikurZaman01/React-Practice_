@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Country = ({ country, handleVisitedCountries, handleCisitedCountriesName }) => {
+const Country = ({ country, handleVisitedCountries, handleCisitedCountriesName, handleFlag }) => {
 
     const { id, thumbnailUrl, title, url } = country || {};
 
@@ -27,7 +27,7 @@ const Country = ({ country, handleVisitedCountries, handleCisitedCountriesName }
                 </div>
 
                 <div>
-                    <button onClick={() => { handleVisitedCountries(); handleVisited(); handleCisitedCountriesName(country) }} className={visited ? "btn bg-green-500" : "btn bg-red-400"} >{visited ? "visited" : "Not Visited"}</button>
+                    <button onClick={() => { handleVisitedCountries(); handleVisited(); handleCisitedCountriesName(country); handleFlag(country) }} className={visited ? "btn bg-green-500" : "btn bg-red-400"} >{visited ? "visited" : "Not Visited"}</button>
                 </div>
 
             </div>
