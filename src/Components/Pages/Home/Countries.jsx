@@ -4,7 +4,8 @@ import Country from './Country';
 const Countries = () => {
 
     const [countries, setCountries] = useState([]);
-    const [visitedCountries, setVisitedCountries] = useState([])
+    const [countVisited, setCountVisited] = useState([]);
+    const [countriesName, setCountriesName] = useState([]);
 
     useState(() => {
         fetch('https://restcountries.com/v3.1/all')
@@ -12,25 +13,34 @@ const Countries = () => {
             .then(data => setCountries(data.slice(0, 20)))
     }, [])
 
-
     const handleVisitedCountries = (country) => {
+        const newVisited = [...countVisited, countries];
+        setCountVisited(newVisited);
 
-        console.log(country.name.common);
-        const newVisitedCountries = [...visitedCountries, countries];
-        setVisitedCountries(newVisitedCountries);
-
-        console.log(visitedCountries);
     }
+
+
+    const handleCisitedCountriesName = (country) => {
+        const name = country.name.common;
+        console.log(name);
+        const newName = [...countriesName, name];
+        setCountriesName(newName);
+    }
+
+
 
     return (
         <div>
             <h1>Countries : {countries.length}</h1>
-            <h3>Visited Countries : {visitedCountries.length}</h3>
+            <h3>Total Visited Countries : {countVisited.length}</h3>
+            <h3>Visited Countries Name : {countriesName}</h3>
             <div>
                 {
-                    countries.map(country => <Country country={country}
-                        key={country.id}
+                    countries.map((country, index) => <Country country={country}
+                        key={index}
                         handleVisitedCountries={handleVisitedCountries}
+                        handleCisitedCountriesName={handleCisitedCountriesName}
+
                     ></Country>)
                 }
             </div>

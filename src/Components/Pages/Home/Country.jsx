@@ -1,14 +1,12 @@
 import { useState } from "react";
 
-const Country = ({ country, handleVisitedCountries }) => {
-
+const Country = ({ country, handleVisitedCountries, handleCisitedCountriesName }) => {
 
     const { id, thumbnailUrl, title, url } = country || {};
 
     const [visited, setVisited] = useState(false);
     const handleVisited = () => {
         setVisited(!visited);
-        console.log("visited this country");
     }
 
 
@@ -29,7 +27,7 @@ const Country = ({ country, handleVisitedCountries }) => {
                 </div>
 
                 <div>
-                    <button onClick={() => { handleVisited(); handleVisitedCountries(country) }} className={visited ? "btn bg-green-500" : "btn bg-red-400"} >{visited ? "visited" : "Not Visited"}</button>
+                    <button onClick={() => { handleVisitedCountries(); handleVisited(); handleCisitedCountriesName(country) }} className={visited ? "btn bg-green-500" : "btn bg-red-400"} >{visited ? "visited" : "Not Visited"}</button>
                 </div>
 
             </div>
