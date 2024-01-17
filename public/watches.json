@@ -1,0 +1,92 @@
+[
+    {
+        "brand": "Rolex",
+        "model": "Submariner",
+        "movement": "Automatic",
+        "case_material": "Stainless Steel",
+        "band_material": "Oystersteel",
+        "water_resistance": "300 meters",
+        "price": "$8,000"
+    },
+    {
+        "brand": "Omega",
+        "model": "Speedmaster Professional",
+        "movement": "Manual-Winding",
+        "case_material": "Stainless Steel",
+        "band_material": "NATO Strap",
+        "water_resistance": "50 meters",
+        "price": "$5,500"
+    },
+    {
+        "brand": "Seiko",
+        "model": "Presage Cocktail Time",
+        "movement": "Automatic",
+        "case_material": "Stainless Steel",
+        "band_material": "Leather",
+        "water_resistance": "50 meters",
+        "price": "$450"
+    },
+    {
+        "brand": "Tag Heuer",
+        "model": "Carrera",
+        "movement": "Automatic",
+        "case_material": "Titanium",
+        "band_material": "Rubber",
+        "water_resistance": "100 meters",
+        "price": "$3,200"
+    },
+    {
+        "brand": "Casio",
+        "model": "G-Shock DW-5600",
+        "movement": "Quartz",
+        "case_material": "Resin",
+        "band_material": "Resin",
+        "water_resistance": "200 meters",
+        "price": "$100"
+    },
+    {
+        "brand": "Patek Philippe",
+        "model": "Nautilus",
+        "movement": "Automatic",
+        "case_material": "Rose Gold",
+        "band_material": "Rose Gold",
+        "water_resistance": "120 meters",
+        "price": "$40,000"
+    },
+    {
+        "brand": "Fossil",
+        "model": "Grant",
+        "movement": "Quartz",
+        "case_material": "Stainless Steel",
+        "band_material": "Leather",
+        "water_resistance": "50 meters",
+        "price": "$150"
+    },
+    {
+        "brand": "Citizen",
+        "model": "Eco-Drive Chandler",
+        "movement": "Solar-powered",
+        "case_material": "Super Titanium",
+        "band_material": "Nylon",
+        "water_resistance": "100 meters",
+        "price": "$250"
+    },
+    {
+        "brand": "Breitling",
+        "model": "Navitimer",
+        "movement": "Automatic",
+        "case_material": "Stainless Steel",
+        "band_material": "Leather",
+        "water_resistance": "30 meters",
+        "price": "$6,500"
+    },
+    {
+        "brand": "Hamilton",
+        "model": "Khaki Field",
+        "movement": "Automatic",
+        "case_material": "Stainless Steel",
+        "band_material": "Canvas",
+        "water_resistance": "100 meters",
+        "price": "$700"
+    }
+]

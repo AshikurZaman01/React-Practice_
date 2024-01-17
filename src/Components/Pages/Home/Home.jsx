@@ -1,17 +1,20 @@
+import { useState } from "react";
 import Watches from "./Watches";
+import { useEffect } from "react";
 
 
 const Home = () => {
 
-    const watches = [
-        { name: 'Titan', price: 1500, color: 'black' },
-        { name: 'HMT', price: 3000, color: 'black' },
-        { name: 'Fossil', price: 2500, color: 'black' },
-        { name: 'Timex', price: 4000, color: 'black' },
-        { name: 'Titan', price: 1500, color: 'black' },
-        { name: 'HMT', price: 3000, color: 'black' },
+    const [watches, setWatches] = useState([]);
 
-    ]
+    useEffect(() => {
+        fetch('watches.json')
+            .then(res => res.json())
+            .then(data => setWatches(data))
+            .catch(err => console.log(err))
+    }, [])
+
+    console.log(watches);
 
     return (
         <div>
