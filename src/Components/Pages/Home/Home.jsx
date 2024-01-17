@@ -9,6 +9,7 @@ const Home = () => {
         { name: 'Fossil', price: 2500, color: 'black' },
         { name: 'Timex', price: 4000, color: 'black' },
         { name: 'Titan', price: 1500, color: 'black' },
+        { name: 'HMT', price: 3000, color: 'black' },
 
     ]
 
