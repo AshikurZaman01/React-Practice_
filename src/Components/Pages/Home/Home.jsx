@@ -1,29 +1,42 @@
-import { useState } from "react";
-import Watches from "./Watches";
-import { useEffect } from "react";
-
+import React, { useEffect, useState } from 'react';
+import Bottoles from './Bottoles';
+import Cart from './Cart';
 
 const Home = () => {
 
-    const [watches, setWatches] = useState([]);
+    const [bottoles, setBottoles] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        fetch('watches.json')
+        fetch('bottoles.json')
             .then(res => res.json())
-            .then(data => setWatches(data))
+            .then(data => setBottoles(data))
             .catch(err => console.log(err))
     }, [])
 
-    console.log(watches);
+
+    const handleAddToCart = (bottole) => {
+        const name = bottole.brand;
+        const price = bottole.price;
+
+        const newCart = [...cart, { name, price }]
+        setCart(newCart);
+    }
 
     return (
-        <div>
-            <h1>Watches Details</h1>
+        <div className='flex justify-between'>
 
-            <div className="grid grid-cols-2 gap-5">
-                {
-                    watches.map((watch, ind) => <Watches key={ind} watch={watch}></Watches>)
-                }
+            <div className='w-[80%]'>
+                <div className='grid grid-cols-3 gap-2'>
+                    {
+                        bottoles.map((bottole, indx) => <Bottoles key={indx} bottole={bottole}
+                            handleAddToCart={handleAddToCart}></Bottoles>)
+                    }
+                </div>
+            </div>
+
+            <div className='w-[20%]'>
+                <Cart cart={cart}></Cart>
             </div>
 
         </div>

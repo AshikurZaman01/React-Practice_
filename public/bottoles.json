@@ -1,0 +1,102 @@
+[
+    {
+        "brand": "Contigo",
+        "model": "Autoseal Water Bottle",
+        "material": "BPA-free Plastic",
+        "capacity": "24 ounces",
+        "color": "Blue",
+        "lid_type": "Autoseal",
+        "price": "$15.99",
+        "image": "https://images.unsplash.com/photo-1544003484-3cd181d17917?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym90dGxlc3xlbnwwfHwwfHx8MA%3D%3Dg"
+    },
+    {
+        "brand": "Hydro Flask",
+        "model": "Standard Mouth Insulated Bottle",
+        "material": "Stainless Steel",
+        "capacity": "32 ounces",
+        "color": "Black",
+        "lid_type": "Standard Mouth",
+        "price": "$39.95",
+        "image": "https://images.unsplash.com/photo-1591704951890-0862b2e98acb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym90dGxlc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "brand": "Nalgene",
+        "model": "Wide Mouth Water Bottle",
+        "material": "Tritan Plastic",
+        "capacity": "32 ounces",
+        "color": "Green",
+        "lid_type": "Wide Mouth",
+        "price": "$12.99",
+        "image": "https://plus.unsplash.com/premium_photo-1676807441166-38060bdc60ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym90dGxlc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "brand": "S'well",
+        "model": "Traveler Bottle",
+        "material": "Stainless Steel",
+        "capacity": "16 ounces",
+        "color": "Rose Gold",
+        "lid_type": "Traveler Lid",
+        "price": "$35.00",
+        "image": "https://images.unsplash.com/photo-1594001227946-595ad950f18d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Ym90dGxlc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "brand": "CamelBak",
+        "model": "Chute Mag Vacuum Insulated Bottle",
+        "material": "Stainless Steel",
+        "capacity": "20 ounces",
+        "color": "Red",
+        "lid_type": "Chute Mag",
+        "price": "$29.99",
+        "image": "https://plus.unsplash.com/premium_photo-1670445045282-36648e89af6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym90dGxlc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "brand": "Yeti",
+        "model": "Rambler Bottle",
+        "material": "Stainless Steel",
+        "capacity": "18 ounces",
+        "color": "Seafoam",
+        "lid_type": "TripleHaul Cap",
+        "price": "$29.98",
+        "image": "https://images.unsplash.com/photo-1566557087503-b839ce6e5aa0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJvdHRsZXN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+        "brand": "Klean Kanteen",
+        "model": "Classic Stainless Steel Water Bottle",
+        "material": "Stainless Steel",
+        "capacity": "27 ounces",
+        "color": "Brushed Stainless",
+        "lid_type": "Loop Cap",
+        "price": "$19.95",
+        "image": "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJvdHRsZXN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+        "brand": "Ello",
+        "model": "Syndicate Glass Water Bottle",
+        "material": "Borosilicate Glass",
+        "capacity": "20 ounces",
+        "color": "Aqua",
+        "lid_type": "Lid with Carry Loop",
+        "price": "$14.99",
+        "image": "https://images.unsplash.com/photo-1616740540792-3daec604777d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJvdHRsZXN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+        "brand": "Takeya",
+        "model": "Actives Insulated Stainless Steel Bottle",
+        "material": "Stainless Steel",
+        "capacity": "24 ounces",
+        "color": "Midnight",
+        "lid_type": "Spout Lid",
+        "price": "$24.99",
+        "image": "https://images.unsplash.com/photo-1589807502973-c7be2ee95d99?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJvdHRsZXN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+        "brand": "LifeStraw",
+        "model": "Go Water Filter Bottle",
+        "material": "BPA-free Plastic",
+        "capacity": "22 ounces",
+        "color": "Purple",
+        "lid_type": "Filter Straw",
+        "price": "$34.95",
+        "image": "https://images.unsplash.com/photo-1604263938975-60a93e43e0a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJvdHRsZXN8ZW58MHx8MHx8fDA%3D"
+    }
+]
