@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { FaRegBookmark } from "react-icons/fa6";
 
 const Blog = ({ blog }) => {
 
@@ -12,17 +13,34 @@ const Blog = ({ blog }) => {
                 <img className='w-full h-full rounded bg-cover' src={cover_img} alt="" />
             </div>
 
-            <div className='py-5'>
-                <div className='flex items-center gap-4'>
-                    <div className='w-[50px] h-[50px]'>
-                        <img className='w-full h-full rounded-full' src={author_img} alt="" />
-                    </div>
-                    <div>
-                        <h4 className='text-2xl font-bold'>{author}</h4>
-                        <h6 className='font-medium text-gray-500'>{posted_date}</h6>
+            <div className='flex justify-between items-center'>
+                <div className='py-5'>
+                    <div className='flex items-center gap-4'>
+                        <div className='w-[50px] h-[50px]'>
+                            <img className='w-full h-full rounded-full' src={author_img} alt="" />
+                        </div>
+                        <div>
+                            <h4 className='text-2xl font-bold'>{author}</h4>
+                            <h6 className='font-medium text-gray-500'>{posted_date}</h6>
+                        </div>
                     </div>
                 </div>
+
+                <div className='flex items-center gap-2 text-xl'>
+                    <h4 className='text-gray-500 font-normal'>{reading_time} min read</h4>
+                    <span className='cursor-pointer'><FaRegBookmark /></span>
+                </div>
             </div>
+
+            <div className='pb-10'>
+                <h1 className='text-3xl font-bold'>{title}</h1>
+                <p className='py-3'>
+                    {
+                        hashtag.map(hash => <span className='bg-gray-200 px-2 py-1 rounded-full text-gray-500 font-medium mr-2' key={hash}>{hash}</span>)
+                    }
+                </p>
+            </div>
+
 
         </div>
     );
