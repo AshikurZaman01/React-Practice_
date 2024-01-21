@@ -6,11 +6,13 @@ import Header from '../Header/Header';
 const Home = () => {
 
     const [bookmark, setBookmark] = useState([]);
+    const [spendTime, setSpendTime] = useState([]);
 
     const handleBookmark = (blog) => {
 
         const newBoomark = [...bookmark, blog];
         setBookmark(newBoomark);
+
     }
 
 

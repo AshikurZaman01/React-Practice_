@@ -8,7 +8,7 @@ const Blog = ({ blog, handleBookmark }) => {
 
     const handleBookmarkClick = () => {
         setBookmarked(!isBookmarked);
-        handleBookmark(blog); 
+        handleBookmark(blog);
     };
 
     return (

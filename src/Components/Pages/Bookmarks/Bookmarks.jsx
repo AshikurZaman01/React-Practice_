@@ -3,12 +3,17 @@ import { CiBookmarkCheck } from "react-icons/ci";
 
 const Bookmarks = ({ bookmark }) => {
 
-
     return (
         <div className="w-1/3 ">
+
+            <div className='my-4 bg-blue-300 rounded p-3'>
+                <h1>Reading Time : {bookmark.reduce((totalTime, book) => totalTime + book.reading_time, 0)} minutes</h1>
+            </div>
+
             <div>
                 <h1 className='text-3xl font-bold mb-5'>Bookmar : {bookmark.length}</h1>
             </div>
+
 
             <div>
                 {
