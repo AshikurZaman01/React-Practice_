@@ -7,7 +7,7 @@ const Blog = ({ blog }) => {
     const { title, cover_img, author, author_img, posted_date, reading_time, hashtag } = blog || {};
 
     return (
-        <div>
+        <div className='shadow shadow-gray-400 p-10'>
 
             <div className='w-[100%] h-[300px]'>
                 <img className='w-full h-full rounded bg-cover' src={cover_img} alt="" />
@@ -28,7 +28,7 @@ const Blog = ({ blog }) => {
 
                 <div className='flex items-center gap-2 text-xl'>
                     <h4 className='text-gray-500 font-normal'>{reading_time} min read</h4>
-                    <span className='cursor-pointer'><FaRegBookmark /></span>
+                    <span className='cursor-pointe btn btn-sm '><FaRegBookmark /></span>
                 </div>
             </div>
 
