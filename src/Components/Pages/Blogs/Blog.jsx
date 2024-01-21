@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { FaRegBookmark } from "react-icons/fa6";
 
-const Blog = ({ blog }) => {
-
-
+const Blog = ({ blog, handleBookmark }) => {
     const { title, cover_img, author, author_img, posted_date, reading_time, hashtag } = blog || {};
+    const [isBookmarked, setBookmarked] = useState(false);
+
+    const handleBookmarkClick = () => {
+        setBookmarked(!isBookmarked);
+        handleBookmark(blog); 
+    };
 
     return (
         <div className='shadow shadow-gray-400 p-10'>
-
             <div className='w-[100%] h-[300px]'>
                 <img className='w-full h-full rounded bg-cover' src={cover_img} alt="" />
             </div>
@@ -20,7 +24,7 @@ const Blog = ({ blog }) => {
                             <img className='w-full h-full rounded-full' src={author_img} alt="" />
                         </div>
                         <div>
-                            <h4 className='text-2xl font-bold'>{author}</h4>
+                            <h4 className='text-xl font-bold'>{author}</h4>
                             <h6 className='font-medium text-gray-500'>{posted_date}</h6>
                         </div>
                     </div>
@@ -28,7 +32,12 @@ const Blog = ({ blog }) => {
 
                 <div className='flex items-center gap-2 text-xl'>
                     <h4 className='text-gray-500 font-normal'>{reading_time} min read</h4>
-                    <span className='cursor-pointe btn btn-sm '><FaRegBookmark /></span>
+                    <span
+                        onClick={handleBookmarkClick}
+                        className={`cursor-pointer btn btn-sm ${isBookmarked ? "bg-red-500" : ""}`}
+                    >
+                        <FaRegBookmark />
+                    </span>
                 </div>
             </div>
 
@@ -40,14 +49,13 @@ const Blog = ({ blog }) => {
                     }
                 </p>
             </div>
-
-
         </div>
     );
 };
 
 Blog.propTypes = {
     blog: PropTypes.object.isRequired,
-}
+    handleBookmark: PropTypes.func.isRequired,
+};
 
 export default Blog;
