@@ -1,3 +1,4 @@
+import Link from "./Link";
 
 const Navbar = () => {
 
@@ -9,20 +10,17 @@ const Navbar = () => {
         { id: 5, path: '/register', name: 'Register' },
         { id: 6, path: '/blog', name: 'Blog' },
         { id: 7, path: '/single-blog', name: 'Single Blog' },
-
     ]
 
     return (
         <div>
-            <div>
-                <nav>
-                    <ul>
-                        {
-                            routes.map(route => <li key={route.id}><a href={`${route.path}`}>{route.name}</a></li>)
-                        }
-                    </ul>
-                </nav>
-            </div>
+            <nav>
+                <ul>
+                    {
+                        routes.map(route => <Link key={route.id} route={route}></Link>)
+                    }
+                </ul>
+            </nav>
         </div>
     );
 };
