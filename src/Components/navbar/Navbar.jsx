@@ -15,25 +15,23 @@ const Navbar = () => {
         { id: 7, path: '/single-blog', name: 'Single Blog' },
     ]
 
-    const [open, setOpen] = useState(false);
+    const [menu, setMenu] = useState(false);
 
     return (
         <div>
             <nav>
-
-                <div onClick={() => setOpen(!open)}>
+                <div className="text-3xl md:hidden" onClick={() => setMenu(!menu)}>
                     {
-                        open === true ? <IoMdClose className="text-3xl md:hidden" /> : <IoMdMenu className="text-3xl md:hidden" />
+                        menu ? <IoMdClose></IoMdClose> : <IoMdMenu></IoMdMenu>
                     }
                 </div>
-
-                <ul className="md:flex text-2xl font-semibold gap-6">
+                <ul className={`text-2xl font-semibold md:flex gap-5 absolute md:static bg-blue-500 duration-1000 ${menu ? "top-12" : 'top-[-400px]'}`}>
                     {
                         routes.map(route => <Link key={route.id} route={route}></Link>)
                     }
                 </ul>
             </nav>
-        </div>
+        </div >
     );
 };
 
