@@ -2,9 +2,10 @@ import React from 'react';
 
 const Phone = ({ phone }) => {
 
-    console.log(phone);
+
 
     const { phone_name, image, brand } = phone || {};
+
 
     return (
         <div className='w-[210px] mx-auto text-center border my-5 rounded'>
