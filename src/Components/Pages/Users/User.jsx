@@ -11,7 +11,7 @@ const User = ({ user }) => {
             <div className="w-[200px] bg-red-400 mx-auto text-center p-5 rounded">
                 <h1>{name}</h1>
 
-                <Link to={`/user/${id}`}><button className="mt-5 btn btn-sm btn-success ">Show More</button></Link>
+                <button className="btn btn-sm btn-secondary"><Link to={`/user/${id}`}>Show More</Link></button>
             </div>
         </div>
     );
