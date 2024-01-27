@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const PostDetails = () => {
 
@@ -8,6 +8,11 @@ const PostDetails = () => {
 
     const { title, body } = postDetails || {}
 
+    const navigate = useNavigate();
+    const handleGoBack = () => {
+        navigate(-1);
+    }
+
     return (
         <div className="w-[500px] bg-red-200 mx-auto">
             <div>
@@ -15,6 +20,8 @@ const PostDetails = () => {
 
                 <div className="p-5 bg-green-200 m-5 ">
                     <h4 className="text-justify text-xl capitalize ">{body}</h4>
+
+                    <button className="btn btn-success" onClick={handleGoBack}>Go Back</button>
                 </div>
             </div>
         </div>
