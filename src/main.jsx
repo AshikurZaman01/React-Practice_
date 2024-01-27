@@ -11,12 +11,14 @@ import About from './Components/Pages/About/About';
 import Contact from './Components/Pages/Contact/Contact';
 import Posts from './Components/Post/Posts';
 import PostDetails from './Components/Post/PostDetails';
+import ErrorPage from './Components/Pages/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Roots></Roots>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -30,6 +32,7 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact></Contact>
       },
+
       {
         path: "/posts",
         loader: () => fetch('https://jsonplaceholder.typicode.com/posts'),
