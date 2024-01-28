@@ -1,6 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import style from "./style.css";
 
 const Header = () => {
+
+    const activeStyleUL = {
+        backgroundColor: 'black',
+        padding: '10px',
+        color: 'red'
+    }
+
+
+
     return (
         <div>
             <div>
@@ -8,12 +18,12 @@ const Header = () => {
             </div>
 
             <div>
-                <ul>
-                    <li><Link to={'/'}>Home</Link></li>
-                    <li><Link to={'/about'}>About</Link></li>
-                    <li><Link to={'/contact'}>Contact</Link></li>
-                    <li><Link to={'/help'}>Help</Link></li>
-                    <li><Link to={'/posts'}>Post</Link></li>
+                <ul style={activeStyleUL} className="flex justify-center gap-10 my-10 font-bold text-2xl">
+                    <NavLink to={'/'}>Home</NavLink>
+                    <NavLink to={'/about'}>About</NavLink>
+                    <NavLink to={'/contact'}>Contact</NavLink>
+                    <NavLink to={'/help'}>Help</NavLink>
+                    <NavLink to={'/posts'}>Post</NavLink>
                 </ul>
             </div>
         </div>
