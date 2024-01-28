@@ -1,32 +1,53 @@
-import { Link, NavLink } from "react-router-dom";
-import style from "./style.css";
+import { useState } from "react";
+import { MdOutlineMenuOpen } from "react-icons/md";
+import { FaWindowClose } from "react-icons/fa";
 
 const Header = () => {
 
-    const activeStyleUL = {
-        backgroundColor: 'black',
-        padding: '10px',
-        color: 'red'
-    }
+    const [isOpen, setIsOpen] = useState(false);
+
+    const routes = [
+        { id: 1, path: '/', name: 'Home' },
+        { id: 2, path: '/contact', name: 'Contact' },
+        { id: 3, path: '/help', name: 'Help' },
+        { id: 4, path: '/about', name: 'About' },
+    ]
 
 
 
     return (
         <div>
-            <div>
-                <h1 className="text-3xl text-center font-bold">Navbar</h1>
-            </div>
 
-            <div>
-                <ul style={activeStyleUL} className="flex justify-center gap-10 my-10 font-bold text-2xl">
-                    <NavLink to={'/'}>Home</NavLink>
-                    <NavLink to={'/about'}>About</NavLink>
-                    <NavLink to={'/contact'}>Contact</NavLink>
-                    <NavLink to={'/help'}>Help</NavLink>
-                    <NavLink to={'/posts'}>Post</NavLink>
+            <nav>
+
+                <div onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[50px]">
+                    {
+                        isOpen ? <FaWindowClose /> : <MdOutlineMenuOpen />
+                    }
+
+                </div>
+
+                <ul className={isOpen ? "" : 'md:flex hidden bg-blue-300 h-[80px] items-center gap-10 text-3xl font-bold mb-10 px-5 duration-1000 transition-all'}>
+                    {
+                        routes.map(route => {
+                            return (
+                                <li key={route.id}><a href={route.path}>{route.name}</a></li>
+                            )
+                        })
+                    }
                 </ul>
-            </div>
-        </div>
+            </nav>
+
+            {/* <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/help">Help</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav> */}
+
+        </div >
     );
 };
 
