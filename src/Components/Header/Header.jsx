@@ -19,6 +19,7 @@ const Header = () => {
         <div>
 
             <nav>
+                <h1>Navbar</h1>
 
                 <div onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[50px]">
                     {
