@@ -12,7 +12,7 @@ const Header = () => {
         { id: 3, path: '/help', name: 'Help' },
         { id: 4, path: '/about', name: 'About' },
         { id: 5, path: '/login', name: 'Login' }, // Add this line to include the login route in the header 
-        { id: 6, path: '/signup', name: 'Sign Up' }, // Add this line to include the signup route in the
+        { id: 6, path: '/signup', name: 'Sign Up' }, 
     ]
 
 
