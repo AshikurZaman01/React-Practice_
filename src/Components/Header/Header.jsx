@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -15,7 +16,7 @@ const Header = () => {
                     {
                         items.map(item => {
                             return (
-                                <li key={item.id}><a href={item.path}>{item.name}</a></li>
+                                <li key={item.id}><Link to={item.path}>{item.name}</Link></li>
                             )
                         })
                     }
