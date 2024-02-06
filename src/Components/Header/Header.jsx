@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { BsMenuButtonFill } from "react-icons/bs";
+import { MdRestaurantMenu } from "react-icons/md";
+import { useState } from "react";
 
 const Header = () => {
+
+    const [isOpen, setOpen] = useState(false);
 
     const items = [
         { id: 1, path: '/', name: 'Home' },
@@ -11,8 +16,15 @@ const Header = () => {
 
     return (
         <div>
-            <div>
-                <ul>
+            <nav>
+
+                <div className="text-4xl md:hidden m-5" onClick={() => setOpen(!isOpen)}>
+                    {
+                        isOpen ? <MdRestaurantMenu></MdRestaurantMenu> : <BsMenuButtonFill></BsMenuButtonFill>
+                    }
+                </div>
+
+                <ul className={isOpen ? "" : "md:flex gap-10 text-4xl font-bold hidden absolute"}>
                     {
                         items.map(item => {
                             return (
@@ -21,7 +33,7 @@ const Header = () => {
                         })
                     }
                 </ul>
-            </div>
+            </nav>
         </div>
     );
 };
