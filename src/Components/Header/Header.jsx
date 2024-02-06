@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <div>
             <nav>
-
+                <h1>navbar</h1>
                 <div className="text-4xl md:hidden m-5" onClick={() => setOpen(!isOpen)}>
                     {
                         isOpen ? <MdRestaurantMenu></MdRestaurantMenu> : <BsMenuButtonFill></BsMenuButtonFill>
