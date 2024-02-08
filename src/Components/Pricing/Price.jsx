@@ -6,7 +6,7 @@ const Price = () => {
         {
             id: 1,
             name: 'Basic',
-            price: '$9',
+            price: 9,
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia',
             features: [
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -16,7 +16,7 @@ const Price = () => {
         {
             id: 2,
             name: 'Standard',
-            price: '$19',
+            price: 19,
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia',
             features: [
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
@@ -26,7 +26,7 @@ const Price = () => {
         {
             id: 3,
             name: 'Premium',
-            price: '$29',
+            price: 29,
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia',
             features: [
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
