@@ -1,8 +1,9 @@
+import Price from "../../Pricing/Price";
 
 const Home = () => {
     return (
         <div>
-            this is home
+            <Price></Price>
         </div>
     );
 };
