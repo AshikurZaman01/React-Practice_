@@ -1,32 +1,32 @@
 import { Link } from "react-router-dom";
-import { BsMenuButtonFill } from "react-icons/bs";
-import { MdRestaurantMenu } from "react-icons/md";
+import { CiMenuFries } from "react-icons/ci";
+import { FaRegWindowClose } from "react-icons/fa";
 import { useState } from "react";
 
-const Header = () => {
+const Navbar = () => {
 
-    const [isOpen, setOpen] = useState(false);
-
-    const items = [
+    const navItems = [
         { id: 1, path: '/', name: 'Home' },
         { id: 2, path: '/about', name: 'About' },
         { id: 3, path: '/contact', name: 'Contact' },
         { id: 4, path: '/help', name: 'Help' },
     ]
 
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div>
-            <nav>
-                <h1>navbar</h1>
-                <div className="text-4xl md:hidden m-5" onClick={() => setOpen(!isOpen)}>
-                    {
-                        isOpen ? <MdRestaurantMenu></MdRestaurantMenu> : <BsMenuButtonFill></BsMenuButtonFill>
-                    }
-                </div>
 
-                <ul className={isOpen ? "" : "md:flex gap-10 text-4xl font-bold hidden absolute"}>
+            <nav>
+                <div className="text-3xl md:hidden m-10 " onClick={() => setIsOpen(!isOpen)}>
                     {
-                        items.map(item => {
+                        isOpen ? <FaRegWindowClose /> : <CiMenuFries />
+                    }
+
+                </div>
+                <ul className={` md:flex text-3xl font-bold gap-10 m-5 ${isOpen ? '' : 'hidden'}`}>
+                    {
+                        navItems.map(item => {
                             return (
                                 <li key={item.id}><Link to={item.path}>{item.name}</Link></li>
                             )
@@ -34,8 +34,9 @@ const Header = () => {
                     }
                 </ul>
             </nav>
+
         </div>
     );
 };
 
-export default Header;
+export default Navbar;
