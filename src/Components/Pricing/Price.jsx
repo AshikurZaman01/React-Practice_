@@ -38,7 +38,7 @@ const Price = () => {
     return (
         <div>
 
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-3 gap-5">
                 {
                     priceItems.map(item => <PriceItems key={item.id} item={item}></PriceItems>)
                 }
