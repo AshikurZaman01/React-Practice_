@@ -1,11 +1,9 @@
-import LineChart from "../../LineChart/LineChart";
-import Price from "../../Pricing/Price";
+import Phone from "../Phones/Phone";
 
 const Home = () => {
     return (
         <div>
-            <Price></Price>
-            <LineChart></LineChart>
+            <Phone></Phone>
         </div>
     );
 };
