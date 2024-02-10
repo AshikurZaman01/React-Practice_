@@ -10,6 +10,7 @@ const Navbar = () => {
         { id: 2, path: '/about', name: 'About' },
         { id: 3, path: '/contact', name: 'Contact' },
         { id: 4, path: '/help', name: 'Help' },
+        { id: 5, path: '/users', name: 'Users' }
     ]
 
     const [isOpen, setIsOpen] = useState(false);
