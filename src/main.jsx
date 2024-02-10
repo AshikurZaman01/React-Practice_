@@ -11,6 +11,7 @@ import Contact from './Components/Pages/Contact/Contact';
 import Help from './Components/Pages/Help/Help';
 import About from './Components/Pages/About/About';
 import Users from './Components/Pages/Users/Users';
+import ViewDetails from './Components/Pages/Users/ViewDetails';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: "/users",
         element: <Users></Users>
+      },
+      {
+        path: "/user/:id",
+        loader: ({ params }) => fetch(`https://dummyjson.com/users/${params.id}`),
+        element: <ViewDetails></ViewDetails>
       }
 
 
