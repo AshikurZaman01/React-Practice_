@@ -1,7 +1,6 @@
 
 const PhoneData = ({ phone }) => {
 
-    console.log(phone);
 
     const { phone_name, brand, image } = phone || {};
 
