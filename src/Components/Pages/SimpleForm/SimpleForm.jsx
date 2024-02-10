@@ -5,10 +5,18 @@ const SimpleForm = () => {
     const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
+    const [error, setError] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name, email, password);
+
+        if (error.length < 6) {
+            setError('Error message must be at least 6 characters long');
+        } else {
+            setError('');
+            console.log(name, email, password);
+        }
+
     }
 
     const handleName = (e) => {
@@ -33,6 +41,7 @@ const SimpleForm = () => {
                 <input onChange={handleEmail} type="text" name="email" id="" placeholder="Email" />
                 <br /><br />
                 <input onChange={handlePassword} type="text" name="password" id="" placeholder="Pasword" />
+                <p>{error}</p>
                 <br />
                 <button className="btn btn-success" type="submit">Submit</button>
             </form>
