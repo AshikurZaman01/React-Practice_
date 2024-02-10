@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 import { FaRegWindowClose } from "react-icons/fa";
 import { useState } from "react";
@@ -11,31 +11,30 @@ const Navbar = () => {
         { id: 3, path: '/contact', name: 'Contact' },
         { id: 4, path: '/help', name: 'Help' },
         { id: 5, path: '/users', name: 'Users' }
-    ]
+    ];
 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div>
-
             <nav>
                 <div className="text-3xl md:hidden m-10 " onClick={() => setIsOpen(!isOpen)}>
-                    {
-                        isOpen ? <FaRegWindowClose /> : <CiMenuFries />
-                    }
-
+                    {isOpen ? <FaRegWindowClose /> : <CiMenuFries />}
                 </div>
-                <ul className={` md:flex text-3xl font-bold gap-10 m-5 ${isOpen ? '' : 'hidden'}`}>
-                    {
-                        navItems.map(item => {
-                            return (
-                                <li key={item.id}><Link to={item.path}>{item.name}</Link></li>
-                            )
-                        })
-                    }
+                <ul className={`md:flex text-3xl font-bold gap-10 m-5 ${isOpen ? '' : 'hidden'}`}>
+                    {navItems.map(item => (
+                        <li key={item.id}>
+                            <NavLink
+                                to={item.path}
+                                activeClassName="text-red-500" // Apply your desired style for the active route
+                                exact
+                            >
+                                {item.name}
+                            </NavLink>
+                        </li>
+                    ))}
                 </ul>
             </nav>
-
         </div>
     );
 };
