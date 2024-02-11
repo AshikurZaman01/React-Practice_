@@ -5,18 +5,12 @@ const SimpleForm = () => {
     const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
-    const [error, setError] = useState('');
+    const [error, setError] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (error.length < 6) {
-            setError('Error message must be at least 6 characters long');
-        } else {
-            setError('');
-            console.log(name, email, password);
-        }
-
+        console.log(name, email, password);
     }
 
     const handleName = (e) => {
@@ -32,18 +26,20 @@ const SimpleForm = () => {
     }
 
     return (
-        <div className="my-10">
+        <div className='my-10'>
+            <h1>Handle Form</h1>
 
-            <h1>Form Handle</h1>
-            <form onSubmit={handleSubmit} className="border bg-red-200">
-                <input onChange={handleName} type="text" name="name" id="" placeholder="Name" />
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="">Name</label>
+                <input onChange={handleName} type="text" name="name" id="" placeholder='Enter Name' />
                 <br /><br />
-                <input onChange={handleEmail} type="text" name="email" id="" placeholder="Email" />
+                <label htmlFor="">Email</label>
+                <input onChange={handleEmail} type="text" name="email" id="" placeholder='Enter Email' />
                 <br /><br />
-                <input onChange={handlePassword} type="text" name="password" id="" placeholder="Pasword" />
-                <p>{error}</p>
-                <br />
-                <button className="btn btn-success" type="submit">Submit</button>
+                <label htmlFor="">Password</label>
+                <input onChange={handlePassword} type="text" name="password" placeholder='Password' id="" />
+                <br /><br />
+                <button type='submit'>Submit</button>
             </form>
 
         </div>
