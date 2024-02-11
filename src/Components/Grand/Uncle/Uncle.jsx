@@ -1,13 +1,18 @@
+import { useContext } from 'react';
 import Cousine from './Cousine';
+import { AssetContext } from '../Grand';
 
 const Uncle = () => {
+
+    const uncleGift = useContext(AssetContext);
+
     return (
         <div className='border-2 border-red-400 rounded-md w-[40%] p-5'>
             Uncle
 
             <section className='flex flex-wrap justify-center items-center my-5 gap-5'>
                 <Cousine name={'Rafsan'}></Cousine>
-                <Cousine name={'Pori Moni'}></Cousine>
+                <Cousine uncleGift={uncleGift} name={'Pori Moni'}></Cousine>
                 <Cousine name={'Sabnoor'}></Cousine>
             </section>
         </div>

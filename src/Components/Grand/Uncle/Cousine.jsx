@@ -1,10 +1,14 @@
 
-const Cousine = ({ name, asset }) => {
-    console.log(asset , name);
+const Cousine = ({ name, gift, uncleGift }) => {
     return (
         <div className="border border-yellow-500 p-4">
             <h1>Cousine</h1>
-            <h3 className="text-2xl text-blue-600">{name}</h3>
+            {
+                gift && <p>{gift}</p>
+            }
+            {
+                uncleGift && <p>{uncleGift}</p>
+            }
         </div>
     );
 };

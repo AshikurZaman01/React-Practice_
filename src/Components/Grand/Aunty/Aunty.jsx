@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Cousine from '../Uncle/Cousine';
+import { AssetContext } from '../Grand';
 
-const Aunty = ({ asset }) => {
+const Aunty = () => {
+
+    const gift = useContext(AssetContext);
+
     return (
         <div className='border-2 border-red-400 rounded-md w-[40%] p-5'>
             Aunty
@@ -9,7 +13,7 @@ const Aunty = ({ asset }) => {
             <section className='flex flex-wrap justify-center items-center my-5 gap-5'>
                 <Cousine name={'Nori'}></Cousine>
                 <Cousine name={'Alli'}></Cousine>
-                <Cousine asset={asset} name={'Malia'}></Cousine>
+                <Cousine gift={gift} name={'Malia'}></Cousine>
             </section>
         </div>
     );
