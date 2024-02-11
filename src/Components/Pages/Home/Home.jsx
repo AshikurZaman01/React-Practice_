@@ -1,15 +1,12 @@
-import Phone from "../Phones/Phone";
-import SimpleForm from "../SimpleForm/SimpleForm";
+import Grand from "../../Grand/Grand";
 
 const Home = () => {
 
 
     return (
         <div>
+            <Grand></Grand>
 
-            <SimpleForm></SimpleForm>
-
-            <Phone></Phone>
         </div>
     );
 };
