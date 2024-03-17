@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import ListItems from "./ListItems";
 
 const Navbar = () => {
 
@@ -13,7 +15,14 @@ const Navbar = () => {
 
     return (
         <div>
+            <nav>
+                <ul className="md:flex md:items-center py-5 px-5 gap-x-6 bg-slate-900 text-white">
+                    {
+                        navItems.map((item, indx) => <ListItems key={indx} item={item}></ListItems>)
+                    }
+                </ul>
 
+            </nav>
         </div>
     );
 };
