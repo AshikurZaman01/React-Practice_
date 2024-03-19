@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
 import ListItems from "./ListItems";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdCloseCircleOutline } from "react-icons/io";
+import { useState } from "react";
 
 const Navbar = () => {
 
@@ -10,13 +12,21 @@ const Navbar = () => {
         { id: 4, name: "Help", path: "/help" },
         { id: 5, name: "Login", path: "/login" },
         { id: 6, name: "Register", path: "/register" },
-
     ]
+
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div>
             <nav>
-                <ul className="md:flex md:items-center py-5 px-5 gap-x-6 bg-slate-900 text-white">
+
+                <div onClick={() => setIsOpen(!isOpen)} className=" md:hidden  text-3xl cursor-pointer text-red">
+                    {
+                        isOpen ? <IoMdCloseCircleOutline /> : <RxHamburgerMenu />
+                    }
+                </div>
+
+                <ul className={`${isOpen ? "" : "hidden"}  md:flex md:justify-center md:items-center py-5 px-5 gap-x-6 bg-slate-900 text-white`}>
                     {
                         navItems.map((item, indx) => <ListItems key={indx} item={item}></ListItems>)
                     }

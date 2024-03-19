@@ -9,8 +9,10 @@ const ListItems = ({ item }) => {
     );
 };
 
+
+
 ListItems.propTypes = {
     item: PropTypes.object.isRequired
-};
+}
 
 export default ListItems;
