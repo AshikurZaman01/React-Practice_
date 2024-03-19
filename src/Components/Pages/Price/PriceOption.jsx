@@ -11,9 +11,9 @@ const PriceOption = ({ pri }) => {
                 <h4 className="text-3xl py-4 text-gray-700 font-bold">{name}</h4>
 
                 {
-                    features.map(feature => {
+                    features.map((feature , indx) => {
                         return (
-                            <p className="text-orange-700 font-semibold py-2" key={feature.id}>{feature}</p>
+                            <p className="text-orange-700 font-semibold py-2" key={indx}>{feature}</p>
                         )
                     })
                 }
