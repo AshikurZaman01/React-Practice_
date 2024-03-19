@@ -1,0 +1,37 @@
+{
+    "gym_prices": [
+        {
+            "id": "basic_membership",
+            "name": "Basic Membership",
+            "price": 29.99,
+            "features": [
+                "Access to cardio equipment",
+                "Access to weightlifting area",
+                "Locker room access"
+            ],
+            "is_featured": false
+        },
+        {
+            "id": "premium_membership",
+            "name": "Premium Membership",
+            "price": 49.99,
+            "features": [
+                "Access to all equipment",
+                "Unlimited group fitness classes",
+                "Personal trainer consultation (1 session)"
+            ],
+            "is_featured": true
+        },
+        {
+            "id": "student_membership",
+            "name": "Student Membership",
+            "price": 19.99,
+            "features": [
+                "Valid student ID required",
+                "Access during off-peak hours",
+                "Locker rental included"
+            ],
+            "is_featured": false
+        }
+    ]
+}

@@ -1,8 +1,9 @@
+import Price from "../Price/Price";
 
 const About = () => {
     return (
         <div>
-            this is about page
+            <Price></Price>
         </div>
     );
 };
