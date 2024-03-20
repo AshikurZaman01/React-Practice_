@@ -9,6 +9,7 @@ import Roots from './Components/Roots/Roots';
 import Home from './Components/Pages/Home/Home';
 import AppliedJObs from './Components/Pages/AppliedJobs/AppliedJObs';
 import Blog from './Components/Pages/Blog/Blog';
+import ExpertDetails from './Components/Pages/Experts/ExpertDetails';
 
 
 
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>
+      },
+      {
+        path: "/expertDetails/:id",
+        loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/retro-forum/latest-posts/${params.id}`),
+        element: <ExpertDetails></ExpertDetails>
       }
 
 

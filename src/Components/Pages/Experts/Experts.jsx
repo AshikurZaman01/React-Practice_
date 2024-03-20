@@ -21,7 +21,7 @@ const Experts = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
-                    experts.map((expert, indx) => <Expert key={indx} expert={expert}></Expert>)
+                    experts.map((expert, indx) => <Expert key={indx} indx={indx} expert={expert}></Expert>)
                 }
             </div>
         </div>
