@@ -11,7 +11,6 @@ const JobCategory = () => {
             .then(data => setJobs(data.job_categories))
     }, [])
 
-    console.log(jobs);
 
     return (
         <div className="container mx-auto mb-10">
