@@ -1,0 +1,54 @@
+{
+    "job_categories": [
+        {
+            "id": 1,
+            "name": "Information Technology",
+            "description": "Jobs related to computers, software development, IT support, and network administration."
+        },
+        {
+            "id": 2,
+            "name": "Healthcare",
+            "description": "Jobs related to healthcare professionals such as doctors, nurses, pharmacists, and medical technicians."
+        },
+        {
+            "id": 3,
+            "name": "Finance",
+            "description": "Jobs related to banking, accounting, financial analysis, and investment management."
+        },
+        {
+            "id": 4,
+            "name": "Education",
+            "description": "Jobs related to teaching, school administration, and educational support."
+        },
+        {
+            "id": 5,
+            "name": "Engineering",
+            "description": "Jobs related to designing, building, and maintaining infrastructure and technology."
+        },
+        {
+            "id": 6,
+            "name": "Sales",
+            "description": "Jobs related to selling products or services, including sales management and retail."
+        },
+        {
+            "id": 7,
+            "name": "Marketing",
+            "description": "Jobs related to promoting and advertising products or services."
+        },
+        {
+            "id": 8,
+            "name": "Customer Service",
+            "description": "Jobs related to assisting customers with inquiries, complaints, and support."
+        },
+        {
+            "id": 9,
+            "name": "Human Resources",
+            "description": "Jobs related to recruiting, training, and managing employees within an organization."
+        },
+        {
+            "id": 10,
+            "name": "Art and Design",
+            "description": "Jobs related to creative fields such as graphic design, fashion design, and fine arts."
+        }
+    ]
+}
