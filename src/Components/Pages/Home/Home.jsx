@@ -1,11 +1,12 @@
-import Experts from "../Experts/Experts";
-import JobCategory from "../JobCategory/JobCategory";
+import Map from "../Map/Map";
 
 const Home = () => {
+
+    
+
     return (
         <div>
-            <JobCategory></JobCategory>
-            <Experts></Experts>
+            <Map></Map>
         </div>
     );
 };

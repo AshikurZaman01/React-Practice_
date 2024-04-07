@@ -1,0 +1,62 @@
+[
+    {
+        "area_name": "Central Park",
+        "city_name": "New York City",
+        "latitude": 40.785091,
+        "longitude": -73.968285
+    },
+    {
+        "area_name": "Eiffel Tower",
+        "city_name": "Paris",
+        "latitude": 48.8584,
+        "longitude": 2.2945
+    },
+    {
+        "area_name": "Sydney Opera House",
+        "city_name": "Sydney",
+        "latitude": -33.8568,
+        "longitude": 151.2153
+    },
+    {
+        "area_name": "Taj Mahal",
+        "city_name": "Agra",
+        "latitude": 27.1751,
+        "longitude": 78.0421
+    },
+    {
+        "area_name": "Grand Canyon",
+        "city_name": "Arizona",
+        "latitude": 36.1069,
+        "longitude": -112.1129
+    },
+    {
+        "area_name": "Red Square",
+        "city_name": "Moscow",
+        "latitude": 55.7539,
+        "longitude": 37.6208
+    },
+    {
+        "area_name": "Machu Picchu",
+        "city_name": "Cusco",
+        "latitude": -13.1631,
+        "longitude": -72.5450
+    },
+    {
+        "area_name": "Great Wall of China",
+        "city_name": "Beijing",
+        "latitude": 40.4319,
+        "longitude": 116.5704
+    },
+    {
+        "area_name": "Mount Everest",
+        "city_name": "Himalayas",
+        "latitude": 27.9881,
+        "longitude": 86.9250
+    },
+    {
+        "area_name": "Niagara Falls",
+        "city_name": "Ontario",
+        "latitude": 43.0815,
+        "longitude": -79.0617
+    }
+]
