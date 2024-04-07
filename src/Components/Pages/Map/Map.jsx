@@ -2,17 +2,17 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const Map = () => {
-    // Array of marker positions
-    const markers = [
-        { position: [51.505, -0.09], content: 'Marker 1' },
-        { position: [51.51, -0.1], content: 'Marker 2' },
-        { position: [51.515, -0.095], content: 'Marker 3' },
-    ];
+const Map = ({ areaData }) => {
+    const markers = areaData.map((data) => {
+        return {
+            position: [data.latitude, data.longitude],
+            content: data.city_name // Assuming you have some content property in your data
+        }
+    });
 
     return (
-        <div className='mx-auto w-[90%]  flex justify-center'>
-            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className=' w-[80%] h-[80vh] rounded'>
+        <div className='mx-auto w-[90%] flex justify-center'>
+            <MapContainer center={[23.6850, 90.3563]} zoom={7} scrollWheelZoom={false} className='w-[80%] h-[80vh] rounded'>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
