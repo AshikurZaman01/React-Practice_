@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const Map = ({ areaData }) => {
-    const markers = areaData.map((data) => {
+    const markers = areaData.map((daa) => {
         return {
             position: [data.latitude, data.longitude],
             content: data.city_name // Assuming you have some content property in your data
