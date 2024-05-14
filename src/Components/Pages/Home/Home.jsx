@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
-import Map from "../Map/Map";
 
 const Home = () => {
-
-    const [areaData, setAreaData] = useState([]);
-
-    useEffect(() => {
-        fetch('Area.json')
-            .then(res => res.json())
-            .then(data => setAreaData(data))
-    }, [])
-
-
     return (
         <div>
-            <Map areaData={areaData}></Map>
+            <Student />
         </div>
     );
 };
+
+
+const Student = ({ age }) => {
+    age = 30;
+    return (
+        <div>
+            <h1>Hello World</h1>
+            <h3>I am  a student</h3>
+            <h4>i am {age} years old</h4>
+        </div>
+    )
+}
 
 export default Home;
