@@ -1,4 +1,4 @@
-export const handleFormSubmit = (e) => {
+const handleFormSubmit = (e) => {
     e.preventDefault();
 
     const name = e.target.name.value;
@@ -18,7 +18,8 @@ export const handleFormSubmit = (e) => {
         e.target.name.value = '';
         e.target.email.value = '';
 
-        // Show an alert after the form is submitted
         alert('Form submitted successfully!');
     }
 }
+
+export { handleFormSubmit }
