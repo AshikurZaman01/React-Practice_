@@ -1,22 +1,30 @@
+import React from "react";
 
 const Home = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target.id.value);
+
+        const idNum = e.target.id.value;
+
+        if (isNaN(idNum)) {
+            alert("Please enter a number")
+        }
+        else {
+            localStorage.setItem("id", idNum);
+        }
+
+    }
+
     return (
         <div>
-            <Student />
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="id" />
+                <button type="submit">Submit</button>
+            </form>
         </div>
     );
 };
-
-
-const Student = ({ age }) => {
-    age = 30;
-    return (
-        <div>
-            <h1>Hello World</h1>
-            <h3>I am  a student</h3>
-            <h4>i am {age} years old</h4>
-        </div>
-    )
-}
 
 export default Home;
