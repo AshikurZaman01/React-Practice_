@@ -1,4 +1,7 @@
+import { data } from "autoprefixer";
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Home = () => {
 
@@ -24,6 +27,24 @@ const Home = () => {
         }
     }
 
+    const [showData, setShowData] = useState([]);
+    useEffect(() => {
+
+        const dataArray = JSON.parse(localStorage.getItem('data') || '[]');
+        setShowData(dataArray);
+    }, [])
+
+
+    const handleDelete = (id) => {
+
+        const newDataArray = showData.filter((data, indx) => indx !== id);
+        localStorage.setItem('data', JSON.stringify(newDataArray));
+        setShowData(newDataArray);
+
+
+    }
+
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -31,6 +52,24 @@ const Home = () => {
                 <input type="text" name="products" placeholder="Enter Number of Products" />
                 <button type="submit">Submit</button>
             </form>
+
+            <div className="mt-10">
+                {
+                    showData.map((data, indx) => {
+                        return (
+                            <div key={indx} >
+                                <ul className="flex gap-5">
+                                    <li>Price :{data.id}</li>
+                                    <li>P.Name : {data.product}</li>
+                                    <button onClick={() => handleDelete(indx)} className="btn btn-sm btn-primary">Edit</button>
+                                </ul>
+                            </div>
+                        )
+                    })
+                }
+
+            </div>
+
         </div>
     );
 };
