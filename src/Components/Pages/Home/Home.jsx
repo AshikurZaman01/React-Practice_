@@ -6,12 +6,12 @@ const Home = () => {
 
     const [users, setUsers] = useState([
         {
-            name: 'Rakibul Hasan',
+            name: 'Mokibul Hasan',
             age: 25,
             email: 'rakibulhasan@gmail.com'
         },
         {
-            name: 'Rakibul Hasan',
+            name: 'Sakibul Hasan',
             age: 25,
             email: 'rakibulhasan@gmail.com'
         },
@@ -23,7 +23,10 @@ const Home = () => {
     ]);
 
     const handleDeleteUser = (id) => {
-        console.log(id);
+
+        const newUser = users.filter((user, index) => index !== id)
+        setUsers(newUser);
+
     }
 
     return (
