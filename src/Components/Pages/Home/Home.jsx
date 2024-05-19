@@ -1,37 +1,12 @@
-import React from 'react';
-import { useState } from 'react';
-import Users from './Users';
+import React, { useState } from 'react';
 
 const Home = () => {
 
-    const [users, setUsers] = useState([
-        {
-            name: 'Mokibul Hasan',
-            age: 25,
-            email: 'rakibulhasan@gmail.com'
-        },
-        {
-            name: 'Sakibul Hasan',
-            age: 25,
-            email: 'rakibulhasan@gmail.com'
-        },
-        {
-            name: 'Rakibul Hasan',
-            age: 25,
-            email: 'rakibulhasan@gmail.com'
-        }
-    ]);
-
-    const handleDeleteUser = (id) => {
-
-        const newUser = users.filter((user, index) => index !== id)
-        setUsers(newUser);
-
-    }
+    const [todos, setTodos] = useState([]);
 
     return (
         <div>
-            <Users users={users} handleDeleteUser={handleDeleteUser}></Users>
+
         </div>
     );
 };
