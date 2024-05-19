@@ -1,13 +1,27 @@
 import React, { useState } from 'react';
+import { TodoProvider } from './Context';
 
 const Home = () => {
 
     const [todos, setTodos] = useState([]);
 
-    return (
-        <div>
+    const addTodo = (todo) => {
 
-        </div>
+    }
+
+    const deleteTodo = (id) => {
+
+    }
+
+    const updateTodo = (id, todo) => {
+
+    }
+    return (
+        <TodoProvider value={{ todos, addTodo, deleteTodo, updateTodo }}>
+            <div>
+
+            </div>
+        </TodoProvider>
     );
 };
 
