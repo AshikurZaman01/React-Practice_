@@ -1,27 +1,13 @@
-import React, { useState } from 'react';
-import { TodoProvider } from './Context';
+import { UserContextProvider } from "./Context/UserContextProvider";
+import Login from "./Login";
 
 const Home = () => {
-
-    const [todos, setTodos] = useState([]);
-
-    const addTodo = (todo) => {
-
-    }
-
-    const deleteTodo = (id) => {
-
-    }
-
-    const updateTodo = (id, todo) => {
-
-    }
     return (
-        <TodoProvider value={{ todos, addTodo, deleteTodo, updateTodo }}>
+        <UserContextProvider>
             <div>
-
+                <Login></Login>
             </div>
-        </TodoProvider>
+        </UserContextProvider>
     );
 };
 
