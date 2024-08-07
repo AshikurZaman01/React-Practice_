@@ -7,8 +7,11 @@ import {
 } from "react-router-dom";
 import Roots from './Components/Roots/Roots';
 import Home from './Components/Pages/Home/Home';
-import AppliedJObs from './Components/Pages/AppliedJobs/AppliedJObs';
-import Blog from './Components/Pages/Blog/Blog';
+import Watches from './Components/Pages/Watches/Watches';
+import About from './Components/Pages/About/About';
+import ErrorPage from './Components/Pages/ErrorPage/ErrorPage';
+import WatchDetails from './Components/Pages/Watches/WatchDetails';
+
 
 
 
@@ -16,6 +19,7 @@ import Blog from './Components/Pages/Blog/Blog';
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage></ErrorPage>,
     element: <Roots></Roots>,
     children: [
       {
@@ -23,21 +27,23 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/appliedJobs",
-        element: <AppliedJObs></AppliedJObs>,
+        path: '/watches',
+        loader: () => fetch('../public/watches.json'),
+        element: <Watches></Watches>
       },
       {
-        path: "/blog",
-        element: <Blog></Blog>
+        path: '/watch/:id',
+        loader: ({ params }) => fetch(`../public/watches.json?id=${params.id}`),
+        element: <WatchDetails></WatchDetails>
       },
-    
-
-
-
+      {
+        path: '/about',
+        element: <About></About>
+      }
     ]
   },
 ]);
-
+//`../public/watches.json?id=${params.id}`
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

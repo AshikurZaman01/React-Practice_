@@ -1,37 +1,43 @@
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import List from "./List";
 
 const Navbar = () => {
 
-    const navItems = [
-        { id: 1, name: 'Statistics', path: '/' },
-        { id: 2, name: 'Applied Jobs', path: '/appliedJobs' },
-        { id: 3, name: 'Blog', path: '/blog' },
+    const routes = [
+        { id: 1, path: '/', name: 'Home' },
+        { id: 2, path: '/watches', name: 'Watches' },
+        { id: 3, path: '/about', name: 'About' },
+        { id: 4, path: '/contact', name: 'Contact' },
+        { id: 5, path: '/Blog', name: 'Blog' }
     ]
 
+    const [open, setOpen] = useState(false);
+
     return (
-        <div className="container mx-auto flex items-center justify-between h-24">
+        <div>
 
             <div>
-                <h1 className="text-4xl font-bold font-sans">CareerHub</h1>
-            </div>
+                <nav>
 
-            <div>
-                <ul className="md:flex gap-10 text-2xl font-semibold text-blue-500">
-                    {
-                        navItems.map((item, indx) => (
-                            <li key={indx}><NavLink to={item.path}>{item.name}</NavLink></li>
-                        ))
-                    }
-                    <li><NavLink></NavLink></li>
-                </ul>
-            </div>
+                    <div className="sm:hidden" onClick={() => setOpen(!open)}>
+                        {
+                            open ?
+                                <button className="btn btn-sm btn-error">Close</button>
+                                :
+                                <button className="btn btn-sm btn-primary">Open</button>
+                        }
+                    </div>
 
-            <div>
-                <button className="bg-blue-500 px-5 py-2 rounded-md text-white font-semibold">Star Applying</button>
+                    <ul className={`md:flex justify-start items-center text-3xl font-semibold gap-5 ${open ? '' : 'hidden'}`}>
+                        {
+                            routes.map((route) => <List key={route.id} route={route}></List>)
+                        }
+                    </ul>
+                </nav>
             </div>
 
         </div>
     );
-};
+}
 
 export default Navbar;

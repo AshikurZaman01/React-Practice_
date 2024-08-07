@@ -1,5 +1,6 @@
 [
     {
+        "id" : 1,
         "brand": "Rolex",
         "model": "Submariner",
         "movement": "Automatic",
@@ -9,6 +10,7 @@
         "price": "$8,000"
     },
     {
+        "id" : 2,
         "brand": "Omega",
         "model": "Speedmaster Professional",
         "movement": "Manual-Winding",
@@ -18,6 +20,7 @@
         "price": "$5,500"
     },
     {
+        "id" : 3,
         "brand": "Seiko",
         "model": "Presage Cocktail Time",
         "movement": "Automatic",
@@ -27,6 +30,7 @@
         "price": "$450"
     },
     {
+        "id" : 4,
         "brand": "Tag Heuer",
         "model": "Carrera",
         "movement": "Automatic",
@@ -36,6 +40,7 @@
         "price": "$3,200"
     },
     {
+        "id" : 5,
         "brand": "Casio",
         "model": "G-Shock DW-5600",
         "movement": "Quartz",
@@ -45,6 +50,7 @@
         "price": "$100"
     },
     {
+        "id" : 6,
         "brand": "Patek Philippe",
         "model": "Nautilus",
         "movement": "Automatic",
@@ -54,6 +60,7 @@
         "price": "$40,000"
     },
     {
+        "id" : 7,
         "brand": "Fossil",
         "model": "Grant",
         "movement": "Quartz",
@@ -63,6 +70,7 @@
         "price": "$150"
     },
     {
+        "id" : 8,
         "brand": "Citizen",
         "model": "Eco-Drive Chandler",
         "movement": "Solar-powered",
@@ -72,6 +80,7 @@
         "price": "$250"
     },
     {
+        "id" : 9,
         "brand": "Breitling",
         "model": "Navitimer",
         "movement": "Automatic",
@@ -81,6 +90,7 @@
         "price": "$6,500"
     },
     {
+        "id" : 10,
         "brand": "Hamilton",
         "model": "Khaki Field",
         "movement": "Automatic",
